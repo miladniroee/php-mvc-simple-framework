@@ -1,12 +1,28 @@
 # Simple PHP MVC Framework (no composer)
 
------------------
+## Table of Content:
+
+* [Requirement](#requirement)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Configuration](#configuration)
+* [Routing](#routing)
+* [Controller](#controller)
+* [Database and Models](#database-and-models)
+* [Helper functions](#helper-functions)
+    * [view()](#view)
+    * [redirect()](#redirect)
+    * [public_dir()](#public_dir)
+    * [abort()](#abort)
+    * [dd()](#dd)
+
+<br>
 
 ## Requirement
 
 PHP 7.4+
 
-## installation
+## Installation
 
 1- Download Zip and extract.
 
@@ -170,7 +186,8 @@ $this->UpdateRow($Query,$Data);
 $this->DeleteRow($Query,$Data);
 ```
 
-### Other Helper functions
+
+## Helper functions
 
 #### view()
 
