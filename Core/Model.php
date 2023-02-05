@@ -23,7 +23,7 @@ class Model
             $sql = "CREATE DATABASE IF NOT EXISTS " . config('db_name');
             // use exec() because no results are returned
             $conn->exec($sql);
-            $conn->exec("USE {$this->DBNAME}");
+            $conn->exec("USE " . config('db_name'));
         } catch (PDOException $e) {
         }
         return $conn;
