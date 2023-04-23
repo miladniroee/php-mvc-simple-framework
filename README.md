@@ -264,3 +264,14 @@ it will die and dump what ever you give it.
 ```php
 dd("hi"); // string(2) "hi"
 ```
+
+
+# Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+For any issue or feature request, please open an issue.
+
+# License
+
+[MIT License](https://choosealicense.com/licenses/mit/)
