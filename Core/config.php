@@ -1,7 +1,7 @@
 <?php
 return [
     "host" => 'localhost',
-    "user" => 'root',
+    "user" => 'mil',
     "pass" => '12345',
     "db_name" => 'php_mvc_db',
     "subdirectory" => "",

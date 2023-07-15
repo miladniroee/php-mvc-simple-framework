@@ -14,7 +14,7 @@ class Router
     public function __construct()
     {
         $RequestUri = str_replace(config('subdirectory'), '', $_SERVER['REQUEST_URI']);
-        $RequestUri = str_replace('//', '/', $RequestUri);
+        $RequestUri = str_replace('//', DIRECTORY_SEPARATOR, $RequestUri);
         $this->Path = parse_url($RequestUri, PHP_URL_PATH);
     }
 

@@ -16,8 +16,10 @@ class BaseController
             $Model = 'Models\\' . end($Controller);
         }
 
-        if (file_exists($Model . ".php")) {
+        if (file_exists(str_replace('\\',DIRECTORY_SEPARATOR, $Model) . ".php")) {
             $this->Database = new $Model();
+        } else {
+            throw new Exception('There is problem with your model files');
         }
     }
 }

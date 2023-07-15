@@ -25,6 +25,7 @@ class Model
             $conn->exec($sql);
             $conn->exec("USE " . config('db_name'));
         } catch (PDOException $e) {
+            dd($e->getMessage());
         }
         return $conn;
     }
