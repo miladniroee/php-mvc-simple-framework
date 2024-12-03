@@ -44,7 +44,7 @@ class Model
      * @param false $LastID
      * @return bool|string
      */
-    private function InsertRow(string $sql, array $value = [], bool $LastID = false)
+    public function InsertRow(string $sql, array $value = [], bool $LastID = false)
     {
         $result = null;
         $conn = $this->Connect();
