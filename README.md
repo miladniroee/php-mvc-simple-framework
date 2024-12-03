@@ -1,4 +1,4 @@
-# Simple PHP MVC Framework (no composer)
+# Simple PHP MVC Framework (no composer) V2.0
 
 ## Table of Content:
 
@@ -8,6 +8,7 @@
 * [Configuration](#configuration)
 * [Routing](#routing)
 * [Controller](#controller)
+* [Migration](#migration)
 * [Database and Models](#database-and-models)
 * [Helper functions](#helper-functions)
     * [view()](#view)
@@ -20,13 +21,19 @@
 
 ## Requirement
 
-PHP 7.4+
+PHP 8.0+
 
 ## Installation
 
 1- Download Zip and extract.
 
-2- Run server:
+2- Run Migration:
+
+```shell
+  php mil.php
+```
+
+3- Run server:
 
 ```shell
 php -S localhost:80
@@ -126,6 +133,31 @@ class Users extends BaseController
 ```
 
 <br>
+
+## Migration
+
+You can create migration files using cli commands
+
+start cli file by opening mil.php file
+
+```shell
+php mil.php
+```
+
+then you can create migration file by commands and migrations will be created in `Database` directory.
+
+> migrations should have 'name' and 'columns' keys, which 'columns' should be an array of columns.
+
+```php
+[
+    "name" => "users",
+    "columns" => [
+        "id INT AUTO_INCREMENT PRIMARY KEY",
+        "name VARCHAR(255) NOT NULL",
+    ]
+]
+```
+
 
 ## Database and Models
 
